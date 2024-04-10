@@ -106,7 +106,7 @@ void main() {
   vec4 image = texture2D(uImage, vUv);
   vec4 hover = texture2D(uImagehover, vUv);
   
-  float finalMask = smoothstep(0.4, 0.5, n + pow(c, 2.));
+  float finalMask = smoothstep(0.4, 0.5, n + pow(c, 2.0));
   
   vec4 finalImage = mix(image, hover, finalMask);
   
