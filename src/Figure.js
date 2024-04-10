@@ -6,12 +6,13 @@ import fragmentShader from './shaders/fragment.glsl'
 export default class Figure {
   constructor(scene) {
     this.$image = document.querySelector('.tile__image')
+    this.$image2 = document.querySelector('.tile__image_2')
     this.scene = scene
 
     this.loader = new THREE.TextureLoader()
 
     this.image = this.loader.load(this.$image.src)
-    this.hoverImage = this.loader.load(this.$image.dataset.hover)
+    this.hoverImage = this.loader.load(this.$image2.src)
     this.sizes = new THREE.Vector2(0, 0)
     this.offset = new THREE.Vector2(0, 0)
 
